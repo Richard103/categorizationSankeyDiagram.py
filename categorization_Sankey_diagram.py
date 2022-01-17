@@ -6,6 +6,7 @@
 import pandas as pd
 #import matplotlib.pyplot as plt
 import plotly.graph_objects as go
+import streamlit as st
 
 import warnings
 warnings.simplefilter("ignore")
@@ -115,6 +116,8 @@ if __name__ == '__main__':
     fig.update_layout(title="Rozpad kategorií do Ocassions", font_size=13, width=1150, height=750)
     fig.update_traces(valueformat='3d', selector=dict(type='sankey'))
     fig.update_layout(hoverlabel=dict(bgcolor="lightgray", font_size=16, font_family="Rockwell"))
-    fig.show()
+    # fig.show()
+    st.title("Title z streamlit!!!")
+    st.plotly_chart(fig)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
