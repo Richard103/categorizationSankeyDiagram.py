@@ -88,7 +88,7 @@ if __name__ == '__main__':
     activity_columns = ["tag_actnight_label", "tag_adult_label", "tag_actallday_label"]
 
 
-    df = pd.read_excel("D:/SharpGrid/Categorization/OnTradeModel.xlsx")
+    df = pd.read_excel("OnTradeModel.xlsx")
 
     orig_categories = df[df.RootCategory == "ReCaBa"].Category.unique().tolist() # ["Cukrárna", "Kavárna", "Hospoda", "Restaurace", "Čajovna", "Fastfood", "Pizzerie", "Klub", "Bar", "Bistro", "Závodní Jídelna", "Vinárna", "Motorest", "Erotické kluby"]
     new_categories = enjoy_columns # [col for col in df.columns if 'tag_enj' in col]
